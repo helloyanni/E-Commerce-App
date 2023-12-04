@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
+using Dtos;
 using EcommerceAPI.Data.Context;
 using EcommerceAPI.Data.Model;
-using EcommerceAPI.Dto;
+using EcommerceAPI.Dtos;
 using EcommerceAPI.Services.Abstract;
 
 namespace EcommerceAPI.Services.Concrete
@@ -31,28 +32,31 @@ namespace EcommerceAPI.Services.Concrete
             return product;
         }
 
-        public PurchaseDto PurchaseItem(BasketDto basket)
+        public PurchaseDto Checkout(BasketDto basket)
         {
             var products = new List<ProductDto>();
 
             var productsList = _context.Products.ToList();
 
-            foreach(int item in basket.ProductIds)
+            foreach(ItemDto item in basket.ProductIds)
             {
-                var result = _context.Products.First(x => x.Id == item);
+                var result = _context.Products.First(x => x.Id == item.ItemId);
+
+                result.Quantity = item.Quantity;
+                result.Price = result.Quantity * result.Price;
 
                 var product = _mapper.Map<ProductDto>(result);
 
                 products.Add(product);
             }
 
-            var price = productsList.Sum(x => x.Price);
+            var price = products.Sum(x => x.Price);
        
             var name = _context.Shoppers.First(x => x.Id == basket.UserId).Name;
 
             foreach (var product in products)
             {
-                var order = new ShopperProductDto(basket.UserId, product.Id);
+                var order = new ShopperProductDto(basket.UserId, product.Id, 10);
 
                 var userOrder = _mapper.Map<ShopperProduct>(order);
 

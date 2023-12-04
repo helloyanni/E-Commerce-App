@@ -1,8 +1,11 @@
-﻿namespace EcommerceAPI.Dto
+﻿using Dtos;
+using System.Collections.Generic;
+
+namespace EcommerceAPI.Dtos
 {
     public class BasketDto
     {
         public int UserId { get; set; }
-        public List<int> ProductIds { get; set; } = new List<int>();
+        public List<ItemDto> ProductIds { get; set; } = new List<ItemDto>();
     }
 }
