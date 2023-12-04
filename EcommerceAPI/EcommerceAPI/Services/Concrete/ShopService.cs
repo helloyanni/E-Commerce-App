@@ -56,7 +56,7 @@ namespace EcommerceAPI.Services.Concrete
 
             foreach (var product in products)
             {
-                var order = new ShopperProductDto(basket.UserId, product.Id, 10);
+                var order = new ShopperProductDto(basket.UserId, product.Id, product.Quantity);
 
                 var userOrder = _mapper.Map<ShopperProduct>(order);
 
@@ -69,6 +69,8 @@ namespace EcommerceAPI.Services.Concrete
                 Price = price,
                 Products = products
             };
+
+            _context.SaveChanges();
 
             return outputResult;
         }

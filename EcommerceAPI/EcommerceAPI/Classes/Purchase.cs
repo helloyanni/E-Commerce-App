@@ -1,5 +1,4 @@
-﻿
-using EcommerceAPI.Dtos;
+﻿using EcommerceAPI.Dtos;
 
 namespace EcommerceAPI.Classes
 {
