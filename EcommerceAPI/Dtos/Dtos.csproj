@@ -32,8 +32,19 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasketDto.cs" />
+    <Compile Include="ItemDto.cs" />
+    <Compile Include="ProductDto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="PurchaseDto.cs" />
+    <Compile Include="ShopperProductDto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

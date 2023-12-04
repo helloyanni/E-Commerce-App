@@ -1,5 +1,5 @@
 ﻿using EcommerceAPI.Data.Model;
-using EcommerceAPI.Dto;
+using EcommerceAPI.Dtos;
 
 namespace EcommerceAPI.Services.Abstract
 {
@@ -7,6 +7,6 @@ namespace EcommerceAPI.Services.Abstract
     {
         List<ProductDto> GetProducts();
         Task<ProductDto> GetProduct(int id);
-        PurchaseDto PurchaseItem(BasketDto basket);
+        PurchaseDto Checkout(BasketDto basket);
     }
 }

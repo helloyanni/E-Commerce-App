@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using EcommerceAPI.Data.Model;
-using EcommerceAPI.Dto;
+using EcommerceAPI.Dtos;
 
 namespace EcommerceAPI.Mapping
 {

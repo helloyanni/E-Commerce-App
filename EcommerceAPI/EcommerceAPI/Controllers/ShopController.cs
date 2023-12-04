@@ -1,11 +1,6 @@
-﻿using EcommerceAPI.Classes;
-using EcommerceAPI.Data.Context;
-using EcommerceAPI.Data.Model;
-using EcommerceAPI.Dto;
+﻿using EcommerceAPI.Dtos;
 using EcommerceAPI.Services.Abstract;
-using EcommerceAPI.Services.Concrete;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace EcommerceAPI.Controllers
 {
@@ -36,7 +31,7 @@ namespace EcommerceAPI.Controllers
         [HttpPost]
         public PurchaseDto PurchaseItems(BasketDto basket)
         {
-            return _shopService.PurchaseItem(basket);
+            return _shopService.Checkout(basket);
         }
     }
 }

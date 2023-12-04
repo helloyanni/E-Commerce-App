@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceAPI", "EcommerceAPI\EcommerceAPI.csproj", "{A3962321-E31C-481D-9524-901A67860A4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dtos", "Dtos\Dtos.csproj", "{F3A6492C-0CE6-4A92-AF01-87E670050525}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A3962321-E31C-481D-9524-901A67860A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3962321-E31C-481D-9524-901A67860A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3962321-E31C-481D-9524-901A67860A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A6492C-0CE6-4A92-AF01-87E670050525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A6492C-0CE6-4A92-AF01-87E670050525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A6492C-0CE6-4A92-AF01-87E670050525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A6492C-0CE6-4A92-AF01-87E670050525}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
